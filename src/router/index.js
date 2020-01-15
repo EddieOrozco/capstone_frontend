@@ -4,8 +4,8 @@ import Home from "../views/Home.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
-import Users from "../views/Users.vue";
-import Cars from "../views/Cars.vue";
+import Cars from "../views/Cars/CarsIndex.vue";
+import NewCar from "../views/Cars/NewCar.vue";
 
 Vue.use(VueRouter);
 
@@ -27,14 +27,14 @@ const routes = [
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
   {
-    path: "/users",
-    name: "users",
-    component: Users
-  },
-  {
     path: "/cars",
     name: "cars",
     component: Cars
+  },
+  {
+    path: "/car/new",
+    name: "newcar",
+    component: NewCar
   }
 ];
 

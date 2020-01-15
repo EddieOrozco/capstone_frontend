@@ -11,9 +11,11 @@
       |
       <router-link to="/logout">Logout</router-link>
       |
-      <router-link to="/users">Users</router-link>
-      |
       <router-link to="/cars">Cars</router-link>
+      |
+      <router-link to="/car/new">New Car</router-link>
+      <!--  |
+      <router-link to="/carstwo">CarTwo</router-link> -->
     </div>
     <router-view />
   </div>
