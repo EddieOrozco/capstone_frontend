@@ -3,17 +3,18 @@
     <h2>Create a car</h2>
     <!-- Will Toggle Car Form -->
     <button>New Car</button>
-
-    <div>
-      Make
-      <input type="text" />
-      Model
-      <input type="text" />
-      Year
-      <input type="text" />
-      Color
-      <input type="text" />
-      <!-- Interior Color
+    <form v-on:submit.prevent="createCar()">
+      <div>
+        Make
+        <input type="text" v-model="make" />
+        Model
+        <input type="text" v-model="model" />
+        Year
+        <input type="text" v-model="year" />
+        Color
+        <input type="text" v-model="color" />
+        <input type="submit" value="Add Car" />
+        <!-- Interior Color
       <input type="text" />
       Car Condition
       <input type="text" />
@@ -35,13 +36,13 @@
       <input type="text" />
       Car Description
       <input type="text" /> -->
-    </div>
+      </div>
+    </form>
     <!-- Will Add Car to User profile -->
-    <button>Add Car</button>
-
-    <h1>{{ message }}</h1>
-    <p>This is my Cars list boom!!!</p>
+    <!-- <button v-on:click="createCar(car)">Add Car</button> -->
     <div v-for="car in cars">
+      <h1>{{ message }}</h1>
+      <p>This is my Cars list boom!!!</p>
       <h3>{{ car.make }}</h3>
     </div>
   </div>
