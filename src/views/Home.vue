@@ -123,26 +123,6 @@ export default {
     },
     editCarForm: function() {
       this.carEditForm = !this.carEditForm;
-    },
-    updateCar: function(car) {
-      console.log("update", car);
-      let params = {
-        make: car.make,
-        model: car.model,
-        year: car.year,
-        color: car.color
-      };
-      axios.patch("/api/cars/" + car.id, params).then(response => {
-        console.log(response);
-      });
-    },
-    destroySoldCar: function(car) {
-      console.log("Destroy", car);
-      axios.delete("/api/cars/" + car.id).then(response => {
-        console.log("Sold!!!", car);
-        let index = this.cars.indexOf(car);
-        this.cars.splice(index, 1);
-      });
     }
   }
 };

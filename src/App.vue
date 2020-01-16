@@ -14,8 +14,6 @@
       <router-link to="/cars">Cars</router-link>
       |
       <router-link to="/car/new">New Car</router-link>
-      <!--  |
-      <router-link to="/carstwo">CarTwo</router-link> -->
     </div>
     <router-view />
   </div>

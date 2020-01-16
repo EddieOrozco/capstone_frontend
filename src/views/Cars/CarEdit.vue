@@ -1,75 +1,74 @@
 <template>
-  <div class="cars">
-    <h2>Create a car</h2>
-    <!-- <button v-on:click="toggleCreateForm()">Create Car</button> -->
-    <div v-if="formToggle">
-      <form v-on:submit.prevent="createCar()">
+  <div class="CarEdit">
+    <h2>Edit Car</h2>
+    <div>
+      <form v-on:submit.prevent="updateCar()">
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div>
           <div class="form-group">
             <label>Make:</label>
-            <input type="text" v-model="make" />
+            <input type="text" v-model="car.make" />
           </div>
           <div class="form-group">
             <label>Model:</label>
-            <input type="text" v-model="model" />
+            <input type="text" v-model="car.model" />
           </div>
           <div class="form-group">
             <label>Year:</label>
-            <input type="number" v-model="year" />
+            <input type="number" v-model="car.year" />
           </div>
           <div class="form-group">
             <label>Color:</label>
-            <input type="text" v-model="color" />
+            <input type="text" v-model="car.color" />
           </div>
           <div class="form-group">
             <label>Interior Color:</label>
-            <input type="text" v-model="interior_color" />
+            <input type="text" v-model="car.interior_color" />
           </div>
           <div class="form-group">
             <label>Car Condition:</label>
-            <input type="text" v-model="car_condition" />
+            <input type="text" v-model="car.car_condition" />
           </div>
           <div class="form-group">
             <label>Location:</label>
-            <input type="text" v-model="location" />
+            <input type="text" v-model="car.location" />
           </div>
           <div class="form-group">
             <label>Engine Size:</label>
-            <input type="text" v-model="engin_size" />
+            <input type="text" v-model="car.engin_size" />
           </div>
           <div class="form-group">
             <label>Transmission Type:</label>
-            <input type="text" v-model="transmission_type" />
+            <input type="text" v-model="car.transmission_type" />
           </div>
           <div class="form-group">
             <label>Exhaust:</label>
-            <input type="text" v-model="exhaust" />
+            <input type="text" v-model="car.exhaust" />
           </div>
           <div class="form-group">
             <label>Mileage:</label>
-            <input type="text" v-model="mileage" />
+            <input type="text" v-model="car.mileage" />
           </div>
           <div class="form-group">
             <label>Tires:</label>
-            <input type="text" v-model="tires" />
+            <input type="text" v-model="car.tires" />
           </div>
           <div class="form-group">
             <label>Rims:</label>
-            <input type="text" v-model="rims" />
+            <input type="text" v-model="car.rims" />
           </div>
           <div class="form-group">
             <label>Car Description:</label>
-            <input type="text" v-model="car_description" />
+            <input type="text" v-model="car.car_description" />
           </div>
           <div class="form-group">
             <label>Price:</label>
-            <input type="text" v-model="price" />
+            <input type="text" v-model="car.price" />
           </div>
 
-          <input type="submit" value="Add Car" />
+          <input type="submit" value="Create" />
         </div>
       </form>
     </div>
@@ -83,45 +82,27 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      formToggle: true,
-      cars: [],
-      make: "",
-      model: "",
-      year: "",
-      color: "",
-      interior_color: "",
-      car_condition: "",
-      location: "",
-      engin_size: "",
-      transmission_type: "",
-      exhaust: "",
-      mileage: "",
-      tires: "",
-      rims: "",
-      car_description: "",
-      price: "",
+      car: {},
       errors: []
     };
   },
   created: function() {
-    axios.get("/api/cars").then(response => {
-      this.cars = response.data;
+    axios.get("/api/cars/" + this.$route.params.id).then(response => {
+      this.car = response.data;
+      console.log(this.car);
     });
   },
   methods: {
-    toggleCreateForm: function() {
-      this.formToggle = !this.formToggle;
-      console.log("ceated car");
-    },
-    createCar: function() {
+    updateCar: function() {
+      console.log("update");
       let params = {
-        make: this.make,
-        model: this.model,
-        year: this.year,
-        color: this.color
+        make: this.car.make,
+        model: this.car.model,
+        year: this.car.year,
+        color: this.car.color
       };
       axios
-        .post("/api/cars", params)
+        .patch("/api/cars/" + this.$route.params.id, params)
         .then(response => {
           this.$router.push("/cars");
         })

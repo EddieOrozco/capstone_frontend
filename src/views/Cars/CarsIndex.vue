@@ -6,6 +6,7 @@
       <h3>Model: {{ car.model }}</h3>
       <h3>Year: {{ car.year }}</h3>
       <h3>Color: {{ car.color }}</h3>
+      <router-link v-bind:to="`/car/${car.id}`">View Car</router-link>
     </div>
   </div>
 </template>
