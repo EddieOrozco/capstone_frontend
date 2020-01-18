@@ -4,10 +4,12 @@ import Home from "../views/Home.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
-import Cars from "../views/Cars/CarsIndex.vue";
+import AllCars from "../views/Cars/AllCars.vue";
 import NewCar from "../views/Cars/NewCar.vue";
 import CarShow from "../views/Cars/CarShow.vue";
 import CarEdit from "../views/Cars/CarEdit.vue";
+import CarOne from "../views/Cars/CarOne.vue";
+import UserShow from "../views/UserShow.vue";
 
 Vue.use(VueRouter);
 
@@ -29,17 +31,17 @@ const routes = [
   { path: "/login", name: "login", component: Login },
   { path: "/logout", name: "logout", component: Logout },
   {
-    path: "/cars",
-    name: "cars",
-    component: Cars
+    path: "/allcars",
+    name: "AllCars",
+    component: AllCars
   },
   {
-    path: "/car/new",
+    path: "/cars/new",
     name: "newcar",
     component: NewCar
   },
   {
-    path: "/car/:id",
+    path: "/cars/:id",
     name: "ShowCar",
     component: CarShow
   },
@@ -47,6 +49,16 @@ const routes = [
     path: "/car/:id/edit",
     name: "CarEdit",
     component: CarEdit
+  },
+  {
+    path: "/car/:id",
+    name: "CarOne",
+    component: CarOne
+  },
+  {
+    path: "/users/:id",
+    name: "UserShow",
+    component: UserShow
   }
 ];
 
