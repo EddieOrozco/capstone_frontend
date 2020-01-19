@@ -37,9 +37,9 @@
                     <li class="active">
                       <a class="page-scroll" href="/">Home</a>
                     </li>
-                    <li>
+                    <!-- <li>
                       <a class="page-scroll" href="/about">About</a>
-                    </li>
+                    </li> -->
                     <li>
                       <a class="page-scroll" href="/users/current_user">Profile</a>
                     </li>
@@ -190,6 +190,9 @@
   color: #124075;
 }
 .footer-icons ul li a {
+  color: #124075;
+}
+.credits a {
   color: #124075;
 }
 </style>
