@@ -4,8 +4,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <div class="section-headline text-center">
-              <h2>Edit Car</h2>
+            <div class="section-headline text-center page-title-edit">
+              <h2>{{ car.year }} {{ car.model }}</h2>
             </div>
           </div>
         </div>
@@ -17,13 +17,13 @@
                 <img v-bind:src="car.main_image" alt="" />
               </div>
             </div>
-            <div class="edit-btn-container">
-              <h3 class="edit-btn-title">You can edit your cars here!</h3>
-              <a class="btn btn-primary edit-btns" href="/cars">My Cars</a>
+            <div v-if="car.is_seller" class="edit-btn-container">
+              <h3 class="edit-btn-title">You can edit your car here!</h3>
+              <a class="btn btn-primary edit-btns" href="/users/current_user">My Cars</a>
 
               <router-link class="btn btn-primary edit-btns" v-bind:to="`/car/${car.id}/edit`">Edit Car</router-link>
 
-              <button class="btn btn-primary edit-btns sold-btn" v-on:click="destroySoldCar(car)">SOLD</button>
+              <button class="btn btn-primary sold-btn" v-on:click="destroySoldCar(car)">SOLD</button>
             </div>
           </div>
           <!-- single-well end-->
@@ -120,11 +120,33 @@
   text-transform: uppercase;
   background-color: #124075;
 }
+.sold-btn {
+  margin-left: 5px;
+  text-transform: uppercase;
+  background-color: #124075;
+}
+.sold-btn:hover {
+  transition: 0.3s ease-in-out;
+  background-color: red;
+  color: #fff;
+}
 .edit-btns:hover {
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-color: #fff;
   color: #124075;
 }
+.page-title-edit {
+  padding-top: 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.page-title-edit h2 {
+  color: #124075;
+}
+/*sold-btn {
+  background-color: red;
+  border: none;
+}*/
 </style>
 
 <script>

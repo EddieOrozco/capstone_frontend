@@ -117,7 +117,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="footer-content">
                 <div class="footer-head">
-                  <h4>information</h4>
+                  <h4>Contact Info</h4>
                   <p>
                     Make sure to come back our web site is always getting update with new cars daily.
                   </p>
@@ -145,13 +145,41 @@
                   <h4>Instagram</h4>
                   <div class="flicker-img">
                     <a href="#">
-                      <img src="img/portfolio/1.jpg" alt="" />
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwcnzGPYE2vo_R1xbp3LI4AbUVhPafuqdiZaf-MjqFzNUBeos9g&s"
+                        alt=""
+                      />
                     </a>
-                    <a href="#"><img src="img/portfolio/2.jpg" alt="" /></a>
-                    <a href="#"><img src="img/portfolio/3.jpg" alt="" /></a>
-                    <a href="#"><img src="img/portfolio/4.jpg" alt="" /></a>
-                    <a href="#"><img src="img/portfolio/5.jpg" alt="" /></a>
-                    <a href="#"><img src="img/portfolio/6.jpg" alt="" /></a>
+                    <a href="#">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwcnzGPYE2vo_R1xbp3LI4AbUVhPafuqdiZaf-MjqFzNUBeos9g&s"
+                        alt=""
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwcnzGPYE2vo_R1xbp3LI4AbUVhPafuqdiZaf-MjqFzNUBeos9g&s"
+                        alt=""
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwcnzGPYE2vo_R1xbp3LI4AbUVhPafuqdiZaf-MjqFzNUBeos9g&s"
+                        alt=""
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwcnzGPYE2vo_R1xbp3LI4AbUVhPafuqdiZaf-MjqFzNUBeos9g&s"
+                        alt=""
+                      />
+                    </a>
+                    <a href="#">
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrwcnzGPYE2vo_R1xbp3LI4AbUVhPafuqdiZaf-MjqFzNUBeos9g&s"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
               </div>

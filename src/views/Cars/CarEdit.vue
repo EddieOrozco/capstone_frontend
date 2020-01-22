@@ -1,11 +1,11 @@
 <template>
   <div class="CarEdit">
-    <h2>Edit Car</h2>
-    <div>
+    <div class="container">
       <form v-on:submit.prevent="updateCar()">
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
+        <div class="edit-title"><h2>Edit Car</h2></div>
         <div>
           <div class="form-group">
             <label>Make:</label>
@@ -67,7 +67,6 @@
             <label>Price:</label>
             <input type="text" v-model="car.price" />
           </div>
-
           <input type="submit" value="Create" />
         </div>
       </form>
@@ -75,7 +74,14 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.edit-title {
+  padding-top: 100px;
+}
+.edit-title h2 {
+  color: #124075;
+}
+</style>
 
 <script>
 import axios from "axios";

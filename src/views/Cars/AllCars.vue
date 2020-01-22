@@ -4,7 +4,7 @@
     <div id="portfolio" class="portfolio-area area-padding fix">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 user-title">
             <div class="section-headline text-center">
               <h2>All cars</h2>
             </div>
@@ -99,6 +99,9 @@
 </template>
 
 <style>
+.user-title {
+  padding-top: 50px;
+}
 .custom-jumbo {
   background-color: #124075;
   /*background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS84ebDBapS9Z9u760B-jsA0B4IilPM9f8SScWedtwkpPqvLWsz&s");*/
