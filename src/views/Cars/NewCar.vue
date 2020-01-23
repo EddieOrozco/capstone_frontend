@@ -98,12 +98,6 @@
 </template>
 
 <style>
-/*.cars {
-  background: blue;
-}*/
-/*.new-img {
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2S7doGi8qY2Aq2PqjvfyZ8tJNQfg4JofBKTqWkyzxtfML8_Pm&s");
-}*/
 .new-title {
   text-align: center;
 }
@@ -118,19 +112,7 @@
   background-position: top;
   background-size: contain;
   padding-bottom: 100px;
-  /*width: 100%;*/
   height: 100%;
-}
-/*.bg-img {
-}*/
-.new-img {
-  margin-top: 100px;
-  /*background-image: url("https://hhclassic.com/files/images/2019-nova-600x280.jpg");*/
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 350px;
 }
 
 .bg-dark {
@@ -140,7 +122,6 @@
   padding: 0;
   margin: 0;
 }
-
 .form-group-container {
   margin-top: 100px;
 }
@@ -165,9 +146,6 @@
 .page-title h2 {
   color: #124075;
 }
-.custom-form {
-  /*padding-bottom: 100px;*/
-}
 .form-container {
   width: 40%;
   display: inline-block;
@@ -182,9 +160,7 @@
   color: #fff;
 }
 .custom-form-group {
-  /*border: 1px solid #124075;*/
   padding: 30px;
-  /*border-radius: 5px;*/
 }
 .add-btn {
   padding-top: 20px;
