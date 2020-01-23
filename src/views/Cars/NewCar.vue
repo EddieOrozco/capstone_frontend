@@ -71,7 +71,7 @@
                     </div>
                     <div class="form-group">
                       <label class="label-title">Car Description:</label>
-                      <input type="text" class="form-control" v-model="car_description" />
+                      <input type="text" class="form-control text-color" v-model="car_description" />
                     </div>
                     <div class="add-btn">
                       <input type="submit" class="btn btn-primary custom-add-btn" value="Add Car" />
@@ -81,16 +81,6 @@
               </form>
             </div>
           </div>
-          <!-- End Left contact -->
-          <!-- Start Google Map -->
-          <!-- <div class="col-md-6 col-sm-6 col-xs-12 block-style"> -->
-          <!-- Start Map -->
-          <!-- <div class="new-img"> -->
-
-          <!-- </div> -->
-          <!-- End Map -->
-          <!-- </div> -->
-          <!-- End Google Map -->
         </div>
       </div>
     </div>
@@ -107,19 +97,19 @@
 .cars {
   margin-top: 50px;
   background-image: url("https://i.pinimg.com/originals/35/ab/e2/35abe2bad4fd1d7635b4974c7140bd2f.jpg");
-  margin-top: 100px;
+  margin-top: 70px;
   background-repeat: no-repeat, repeat;
   background-position: top;
-  background-size: contain;
-  padding-bottom: 100px;
   height: 100%;
+  width: 100%;
+  padding: 0;
 }
 
 .bg-dark {
   background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
   width: 100%;
-  padding: 0;
+  padding: 0 50px 75px;
   margin: 0;
 }
 .form-group-container {
@@ -136,6 +126,9 @@
 .block-style {
   display: block;
   width: 100%;
+}
+.contact-form input[type="text"] {
+  color: #fff;
 }
 .page-title {
   /*padding-top: 100px;*/

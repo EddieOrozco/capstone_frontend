@@ -70,19 +70,19 @@
                   </li>
                   <li>
                     <div class="card-subTitle">
-                      Car Condition:
+                      Transmission Type:
                       <span>{{ car.transmission_type }}</span>
                     </div>
                   </li>
                   <li>
                     <div class="card-subTitle">
-                      Car Condition:
+                      Tires:
                       <span>{{ car.tires }}</span>
                     </div>
                   </li>
                   <li>
                     <div class="card-subTitle">
-                      Car Condition:
+                      Rims:
                       <span>{{ car.rims }}</span>
                     </div>
                   </li>
