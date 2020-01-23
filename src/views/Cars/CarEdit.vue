@@ -1,73 +1,75 @@
 <template>
   <div class="CarEdit">
-    <div class="container">
+    <div class="col-9 form-container container">
       <form v-on:submit.prevent="updateCar()">
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
         <div class="edit-title"><h2>Edit Car</h2></div>
-        <div>
+        <div class="custom-form-group">
           <div class="form-group">
-            <label>Make:</label>
-            <input type="text" v-model="car.make" />
+            <label class="label-title">Make:</label>
+            <input type="text" v-model="car.make" class="form-control" />
           </div>
           <div class="form-group">
-            <label>Model:</label>
-            <input type="text" v-model="car.model" />
+            <label class="label-title">Model:</label>
+            <input class="form-control" type="text" v-model="car.model" />
           </div>
           <div class="form-group">
-            <label>Year:</label>
-            <input type="number" v-model="car.year" />
+            <label class="label-title">Year:</label>
+            <input class="form-control" type="number" v-model="car.year" />
           </div>
           <div class="form-group">
-            <label>Color:</label>
-            <input type="text" v-model="car.color" />
+            <label class="label-title">Color:</label>
+            <input class="form-control" type="text" v-model="car.color" />
           </div>
           <div class="form-group">
-            <label>Interior Color:</label>
-            <input type="text" v-model="car.interior_color" />
+            <label class="label-title">Interior Color:</label>
+            <input class="form-control" type="text" v-model="car.interior_color" />
           </div>
           <div class="form-group">
-            <label>Car Condition:</label>
-            <input type="text" v-model="car.car_condition" />
+            <label class="label-title">Car Condition:</label>
+            <input class="form-control" type="text" v-model="car.car_condition" />
           </div>
           <div class="form-group">
-            <label>Location:</label>
-            <input type="text" v-model="car.location" />
+            <label class="label-title">Location:</label>
+            <input class="form-control" type="text" v-model="car.location" />
           </div>
           <div class="form-group">
-            <label>Engine Size:</label>
-            <input type="text" v-model="car.engin_size" />
+            <label class="label-title">Engine Size:</label>
+            <input class="form-control" type="text" v-model="car.engin_size" />
           </div>
           <div class="form-group">
-            <label>Transmission Type:</label>
-            <input type="text" v-model="car.transmission_type" />
+            <label class="label-title">Transmission Type:</label>
+            <input class="form-control" type="text" v-model="car.transmission_type" />
           </div>
           <div class="form-group">
-            <label>Exhaust:</label>
-            <input type="text" v-model="car.exhaust" />
+            <label class="label-title">Exhaust:</label>
+            <input class="form-control" type="text" v-model="car.exhaust" />
           </div>
           <div class="form-group">
-            <label>Mileage:</label>
-            <input type="text" v-model="car.mileage" />
+            <label class="label-title">Mileage:</label>
+            <input class="form-control" type="text" v-model="car.mileage" />
           </div>
           <div class="form-group">
-            <label>Tires:</label>
-            <input type="text" v-model="car.tires" />
+            <label class="label-title">Tires:</label>
+            <input class="form-control" type="text" v-model="car.tires" />
           </div>
           <div class="form-group">
-            <label>Rims:</label>
-            <input type="text" v-model="car.rims" />
+            <label class="label-title">Rims:</label>
+            <input class="form-control" type="text" v-model="car.rims" />
           </div>
           <div class="form-group">
-            <label>Car Description:</label>
-            <input type="text" v-model="car.car_description" />
+            <label class="label-title">Car Description:</label>
+            <input class="form-control" type="text" v-model="car.car_description" />
           </div>
           <div class="form-group">
-            <label>Price:</label>
-            <input type="text" v-model="car.price" />
+            <label class="label-title">Price:</label>
+            <input class="form-control" type="text" v-model="car.price" />
           </div>
-          <input type="submit" value="Create" />
+          <div class="add-btn">
+            <input class="btn btn-primary custom-add-btn" type="submit" value="Create" />
+          </div>
         </div>
       </form>
     </div>
@@ -77,6 +79,7 @@
 <style>
 .edit-title {
   padding-top: 100px;
+  text-align: center;
 }
 .edit-title h2 {
   color: #124075;

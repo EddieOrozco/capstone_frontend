@@ -27,7 +27,7 @@
           <h3 class="box-btn"><a href="">Events</a></h3>
         </div>
         <div class="col-6 box-two">
-          <h3 class="box-btn ext"><a href="">Actions</a></h3>
+          <h3 class="box-btn ext"><a href="">Auctions</a></h3>
         </div>
         <div class="w-100"></div>
         <div class="col-6 box-three">

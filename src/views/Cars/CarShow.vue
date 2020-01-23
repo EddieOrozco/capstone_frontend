@@ -30,7 +30,7 @@
           <div class="col-md-6 col-sm-6 col-xs-12">
             <div class="well-middle">
               <div class="single-well">
-                <h4 class="sec-head">{{ car.year }} {{ car.make }} {{ car.model }}</h4>
+                <!-- <h4 class="sec-head">{{ car.year }} {{ car.make }} {{ car.model }}</h4> -->
                 <ul>
                   <li>
                     <div class="card-subTitle">
@@ -89,7 +89,7 @@
                   <li>
                     <div class="card-subTitle">
                       Price:
-                      <span>{{ car.price }}</span>
+                      <span>$ {{ car.price }}</span>
                     </div>
                   </li>
 

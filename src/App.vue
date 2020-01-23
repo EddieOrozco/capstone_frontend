@@ -40,25 +40,25 @@
                     <!-- <li>
                       <a class="page-scroll" href="/about">About</a>
                     </li> -->
-                    <li>
+                    <li v-if="jwt">
                       <a class="page-scroll" href="/users/current_user">Profile</a>
                     </li>
                     <li>
                       <a class="page-scroll" href="/allcars">All Cars</a>
                     </li>
-                    <li>
+                    <li v-if="jwt">
                       <a class="page-scroll" href="/cars/new">New car</a>
                     </li>
-                    <li>
+                    <li v-if="jwt">
                       <a class="page-scroll" href="/examples/webgl_materials_car.html">3d car view</a>
                     </li>
-                    <li>
+                    <li v-if="!jwt">
                       <a class="page-scroll" href="/signup">Signup</a>
                     </li>
-                    <li>
+                    <li v-if="!jwt">
                       <a class="page-scroll" href="/login">Login</a>
                     </li>
-                    <li>
+                    <li v-if="jwt">
                       <a class="page-scroll" href="/logout">Logout</a>
                     </li>
                   </ul>
@@ -74,7 +74,7 @@
     </header>
     <!-- header end -->
 
-    <router-view />
+    <router-view v-on:theJwtChanged="updateJwt()" />
 
     <!-- Start Footer bottom Area -->
     <footer>
@@ -227,13 +227,21 @@
 
 <script>
 export default {
+  data: function() {
+    return {
+      jwt: null
+    };
+  },
+  created: function() {
+    this.updateJwt();
+  },
   mounted: function() {
     (function($) {
       "use strict";
 
       /*--------------------------
-  preloader
-  ---------------------------- */
+      preloader
+      ---------------------------- */
       $(window).on("load", function() {
         var pre_loader = $("#preloader");
         pre_loader.fadeOut("slow", function() {
@@ -242,8 +250,8 @@ export default {
       });
 
       /*---------------------
-   TOP Menu Stick
-  --------------------- */
+       TOP Menu Stick
+      --------------------- */
       var s = $("#sticker");
       var pos = s.position();
       $(window).on("scroll", function() {
@@ -256,8 +264,8 @@ export default {
       });
 
       /*----------------------------
-   Navbar nav
-  ------------------------------ */
+       Navbar nav
+      ------------------------------ */
       var main_menu = $(".main-menu ul.navbar-nav li ");
       main_menu.on("click", function() {
         main_menu.removeClass("active");
@@ -265,8 +273,8 @@ export default {
       });
 
       /*----------------------------
-   wow js active
-  ------------------------------ */
+       wow js active
+      ------------------------------ */
       new WOW().init();
 
       $(".navbar-collapse a:not(.dropdown-toggle)").on("click", function() {
@@ -291,8 +299,8 @@ export default {
       });
 
       /*----------------------------
-   Scrollspy js
-  ------------------------------ */
+       Scrollspy js
+      ------------------------------ */
       var Body = $("body");
       Body.scrollspy({
         target: ".navbar-collapse",
@@ -300,14 +308,14 @@ export default {
       });
 
       /*---------------------
-    Venobox
-  --------------------- */
+        Venobox
+      --------------------- */
       var veno_box = $(".venobox");
       veno_box.venobox();
 
       /*----------------------------
-  Page Scroll
-  ------------------------------ */
+      Page Scroll
+      ------------------------------ */
       var page_scroll = $("a.page-scroll");
       page_scroll.on("click", function(event) {
         var $anchor = $(this);
@@ -324,8 +332,8 @@ export default {
       });
 
       /*--------------------------
-    Back to top button
-  ---------------------------- */
+        Back to top button
+      ---------------------------- */
       $(window).scroll(function() {
         if ($(this).scrollTop() > 100) {
           $(".back-to-top").fadeIn("slow");
@@ -340,16 +348,16 @@ export default {
       });
 
       /*----------------------------
-   Parallax
-  ------------------------------ */
+       Parallax
+      ------------------------------ */
       var well_lax = $(".wellcome-area");
       well_lax.parallax("50%", 0.4);
       var well_text = $(".wellcome-text");
       well_text.parallax("50%", 0.6);
 
       /*--------------------------
-   collapse
-  ---------------------------- */
+       collapse
+      ---------------------------- */
       var panel_test = $(".panel-heading a");
       panel_test.on("click", function() {
         panel_test.removeClass("active");
@@ -357,8 +365,8 @@ export default {
       });
 
       /*---------------------
-   Testimonial carousel
-  ---------------------*/
+       Testimonial carousel
+      ---------------------*/
       var test_carousel = $(".testimonial-carousel");
       test_carousel.owlCarousel({
         loop: true,
@@ -378,8 +386,8 @@ export default {
         }
       });
       /*----------------------------
-   isotope active
-  ------------------------------ */
+       isotope active
+      ------------------------------ */
       // portfolio start
       $(window).on("load", function() {
         var $container = $(".awesome-project-content");
@@ -411,8 +419,8 @@ export default {
       //portfolio end
 
       /*---------------------
-   Circular Bars - Knob
---------------------- */
+         Circular Bars - Knob
+      --------------------- */
       if (typeof $.fn.knob != "undefined") {
         var knob_tex = $(".knob");
         knob_tex.each(function() {
@@ -450,6 +458,11 @@ export default {
         });
       }
     })(jQuery);
+  },
+  methods: {
+    updateJwt: function() {
+      this.jwt = localStorage.jwt;
+    }
   }
 };
 </script>

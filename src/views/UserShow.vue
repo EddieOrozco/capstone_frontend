@@ -11,7 +11,7 @@
           </div>
         </div>
         <div class="row">
-          <h4 class="car-info-title">Selling cars</h4>
+          <h4 class="car-info-title">Selling cars ({{ user.selling_cars.length }})</h4>
           <div class="awesome-project-content">
             <!-- single-awesome-project start -->
             <div v-for="car in user.selling_cars" class="col-md-4 col-sm-4 col-xs-12 design development">
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class="row">
-          <h4 class="car-info-title">Bought cars</h4>
+          <h4 class="car-info-title">Bought cars ({{ user.bought_cars.length }})</h4>
           <div class="awesome-project-content">
             <!-- single-awesome-project start -->
             <div v-for="car in user.bought_cars" class="col-md-4 col-sm-4 col-xs-12 design development">
@@ -90,7 +90,7 @@
   margin-left: 1px;
 }
 .profile-btns:hover {
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-color: #fff;
   color: #124075;
 }
